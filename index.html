@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Pedido LG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="loading" class="hidden">
+		
+		<p>Carregando...</p>
+	</div>
+
+	
+    <div class="container">
+        <h1>Consulta de Pedido</h1>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" name="orderId" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Consultar</button>
+        </form>
+
+        <div id="orderDetails" class="hidden">
+            <h2>Detalhes do Pedido</h2>
+            <p><strong>ID do Pedido:</strong> <span id="orderNumber"></span></p>
+            <p><strong>Status:</strong> <span id="orderStatus"></span></p>
+			<p><strong>Status Code:</strong> <span id="orderCodeStatus"></span></p>
+            <p><strong>Data do Pedido:</strong> <span id="orderDate"></span></p>
+            <p><strong>Valor Total:</strong> R$ <span id="orderTotal"></span></p>
+            <p><strong>Produto:</strong> <span id="productName"></span></p>
+            <p><strong>Método de Pagamento:</strong> <span id="paymentMethod"></span></p>
+            <p><strong>Endereço de Entrega:</strong> <span id="shippingAddress"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
